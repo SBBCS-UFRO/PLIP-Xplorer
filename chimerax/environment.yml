@@ -1,0 +1,9 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - openbabel>=3.2,<3.3
+  - numpy
+  - lxml
+  - pip
+  - setuptools

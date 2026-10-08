@@ -1,0 +1,2 @@
+c281de59490edd71adb60d0d40ad7de0085dfba0ee289bc29a3949fa95f9b9c3  PLIP-Xplorer-1.0.0.zip
+0314cbb9873a36c7c81ebf6f3b293fae6d8235376dbccd248b8ff3395d52dd1f  chimerax_plip_xplorer-1.0.0-py3-none-any.whl

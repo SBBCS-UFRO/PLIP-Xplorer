@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BundleInfo name="ChimeraX-PLIP-Xplorer" version="1.0.0" package="chimerax.plip"
+            minSessionVersion="1" maxSessionVersion="1" purePython="true"
+            supersedes="ChimeraX-PLIP,ChimeraX-PLIP-Explorer">
+  <Categories><Category name="Structure Analysis"/></Categories>
+  <Author>PLIP contributors</Author>
+  <Email>hello@pharm.ai</Email>
+  <URL>https://github.com/pharmai/plip</URL>
+  <Synopsis>PLIP-Xplorer: analyze, explore and customize protein–ligand interactions</Synopsis>
+  <Description>Run PLIP in an isolated Python environment and explore its eight interaction classes in ChimeraX.</Description>
+  <License>GPL-2.0-only</License>
+  <Dependencies>
+    <Dependency name="ChimeraX-Core" version="~=1.12"/>
+    <Dependency name="ChimeraX-Atomic" version="&gt;=1.0"/>
+    <Dependency name="ChimeraX-PDB" version="&gt;=1.0"/>
+    <Dependency name="ChimeraX-Markers" version="&gt;=1.0"/>
+    <Dependency name="ChimeraX-UI" version="&gt;=1.0"/>
+  </Dependencies>
+  <Classifiers>
+    <PythonClassifier>License :: OSI Approved :: GNU General Public License v2 (GPLv2)</PythonClassifier>
+    <ChimeraXClassifier>Tool :: PLIP-Xplorer :: Structure Analysis :: Explore protein–ligand interactions</ChimeraXClassifier>
+    <ChimeraXClassifier>Command :: plip analyze :: Structure Analysis :: Analyze an atomic model with PLIP</ChimeraXClassifier>
+    <ChimeraXClassifier>Command :: plip load :: Structure Analysis :: Display a PLIP XML report on a matching model</ChimeraXClassifier>
+    <ChimeraXClassifier>Command :: plip settings :: Structure Analysis :: Configure the external PLIP Python</ChimeraXClassifier>
+  </Classifiers>
+  <DataFiles><DataFile>LICENSE.txt</DataFile><DataDir>docs</DataDir><DataDir>assets</DataDir><DataDir>locales</DataDir></DataFiles>
+</BundleInfo>

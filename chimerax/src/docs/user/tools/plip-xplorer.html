@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>PLIP-Xplorer 1.0.0</title></head>
+<body><img src="../../../assets/plip-xplorer.png" alt="PLIP-Xplorer" width="120"><h1>PLIP-Xplorer 1.0.0</h1>
+<p>The Language selector offers English, Spanish, German, French, Simplified Chinese, Japanese and Brazilian Portuguese. Changes apply immediately and are remembered, preserving results, styles and manual 3D label placement. Commands, scientific files and external diagnostics retain their original identifiers and language. This selector affects the plugin interface, not ChimeraX or operating-system dialogs.</p>
+<p>Open <b>Tools → Structure Analysis → PLIP-Xplorer</b>. Choose an atomic model,
+the Python executable of a separate environment with PLIP and Open Babel,
+and a results folder. Click <b>Analyze structure</b>.</p>
+<p>The original PLIP engine calculates the interactions. The tool creates a static
+PDB snapshot of the active coordinate set and displays eight interaction classes
+using native ChimeraX models. Choose a ligand, toggle interaction types, click rows
+to select receptor residues, or focus the binding site. Water bridge distances are
+acceptor–water / donor–water, in Å; hydrogen bonds show donor–acceptor distance.</p>
+<p>Every run preserves input.pdb, report.xml, report.txt, engine.log and
+provenance.json in a new subfolder. Export CSV for all sites or save a .cxs scene.
+Scenes preserve the drawings; to reopen the table, load report.xml against the
+matching analyzed snapshot. Do not use these static drawings on a trajectory or
+after changing atom coordinates. Rigid model movements are supported.</p>
+<h2>Commands</h2><pre>
+plip settings python /path/to/plip-environment/bin/python
+plip analyze #1
+plip analyze #1 output /path/to/results noHydro true wait true
+plip load /path/to/report.xml structure #1
+</pre>
+<h2>Appearance and image export</h2>
+<p>The <b>Appearance</b> tab offers live preview of backgrounds, native lighting,
+materials, camera projection, molecular representations, cartoon transparency,
+element colors, residue/ligand labels and PLIP distance labels. Interaction colors,
+line radii and dashes are independent for each class. Choose Original, Publication,
+Dark presentation or Illustration presets, save a default, or save/load a JSON style.</p>
+<p>Label text can include the residue name, chain and number. Font, size, color,
+background boxes and separate residue/distance offsets are configurable. Enable
+<b>Move individual labels with right-button drag</b> to resolve overlaps before
+exporting. Disabling it or closing the panel restores the previous mouse binding.
+Changing styles or filters rebuilds labels, so perform manual placement last.
+Water bridges display
+two reported distances in the correct donor/acceptor order. Label and style changes
+do not alter scientific results. Labels and drawings survive native session saving.</p>
+<p>In <b>Export image</b>, choose PNG, TIFF or JPEG, pixel dimensions, viewport aspect
+ratio, supersampling and JPEG quality. PNG/TIFF support transparent backgrounds.
+The current view is exported. Optionally isolate the PLIP structure during export;
+other models' visibility is restored afterward. Background, camera and lighting
+controls affect the entire scene. Choose manual label colors for the intended
+background when exporting transparency. The maximum internal render is 100 megapixels.</p>
+<p>Keep existing hydrogens only when they have already been prepared. Exact
+repeatability requires the same prepared structure, PLIP/Open Babel versions and
+options. This initial adapter handles conventional PDB-sized complexes and the
+default PLIP small-molecule mode. It rejects multi-character chain IDs and residue
+numbers beyond PDB limits. It does not expose PLIP's peptide, intra-chain or region
+analysis options yet.</p>
+<p>This is an experimental integration, not an official UCSF or PharmAI release.
+PLIP and this adapter are licensed under GPLv2. Please cite Adasme et al.,
+Nucleic Acids Research (2021), doi:10.1093/nar/gkab294.</p><p><small>© 2026 Structural Bioinformatics & Bioactive Compound Synthesis Lab - UFRO</small></p></body></html>
