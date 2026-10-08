@@ -10,6 +10,12 @@ An UCSF ChimeraX plugins and GUI for PLIP.
 
 If you want to install PLIP-Xplorer GUI, follow these instructions.
 
+> Before set up, make sure the engine once from a terminal, with Conda installed
+
+```
+python3 chimerax/setup_backend.py
+```
+
 > Download this repo and install on ChimeraX (command bar) with:
 
 ```
